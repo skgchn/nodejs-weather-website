@@ -13,6 +13,7 @@ const geocode = require(path.join(utilsPath, '/geocode'));
 const weather = require(path.join(utilsPath, '/weather'));
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const builtBy = 'Sunil Girdhar';
 
@@ -93,6 +94,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port + '.');
 });
